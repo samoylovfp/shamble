@@ -1,5 +1,6 @@
 - audio device selection
 - audio encoding (static libopus?)
 - send audio via iroh
+- ui with tauri and [alpinejs](https://alpinejs.dev)?
 - mix audio
 - build for windows
