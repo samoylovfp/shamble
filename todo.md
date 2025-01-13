@@ -1,0 +1,5 @@
+- audio device selection
+- audio encoding (static libopus?)
+- send audio via iroh
+- mix audio
+- build for windows
