@@ -62,7 +62,13 @@ pub fn start_actor(pk: &SecretKey) -> (Sender<Command>, Receiver<NetMsg>) {
             .unwrap();
 
         let router = Router::builder(endpoint)
-            .accept(ALPN, ShambleProtocolHandler { msg: msg_sender })
+            .accept(
+                ALPN,
+                ShambleProtocolHandler {
+                    msg: msg_sender,
+                    connections: Default::default(),
+                },
+            )
             .spawn()
             .await
             .unwrap();
